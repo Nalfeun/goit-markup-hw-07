@@ -1,0 +1,53 @@
+.messengers {
+  display: inline-flex;
+}
+
+.messengers__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.messengers__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-main-color);
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+
+  &--inverse {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.messengers__svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+
+  &--inverse {
+    fill: var(--secondary-text-color);
+  }
+
+  .messengers__link:hover &,
+  .messengers__link:focus & {
+    fill: var(--secondary-text-color);
+  }
+}
+
+.messengers-footer__text {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

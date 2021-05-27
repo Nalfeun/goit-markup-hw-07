@@ -1,0 +1,27 @@
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__box {
+  margin-right: 70px;
+}
+
+.footer {
+  background-color: var(--background-hero-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__link {
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer__studio {
+  color: var(--secondary-text-color);
+}

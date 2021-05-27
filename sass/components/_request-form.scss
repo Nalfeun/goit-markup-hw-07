@@ -1,0 +1,179 @@
+.form-request {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.form-request__text {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.form-request__field {
+  position: relative;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.form-request__label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  transform: translateY(-50%);
+  transition: transform 250ms var(--timing-function);
+
+  .form-request__field:focus-within & {
+    transform: translate(-40px, -38px);
+  }
+}
+
+.form-request__input:not(:placeholder-shown) + .form-request__label {
+  transform: translate(-40px, -38px);
+}
+
+.form-request__input {
+  display: block;
+  width: 448px;
+  height: 40px;
+  padding-left: 40px;
+  color: var(--primary-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms var(--timing-function),
+    outline 250ms var(--timing-function);
+
+  .form-request__field:focus-within & {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+  }
+}
+
+.form-request__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--timing-function);
+
+  .form-request__field:focus-within & {
+    fill: var(--accent-color);
+  }
+}
+
+.form-request__comment-field {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-request__comment-label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  transition: transform 250ms var(--timing-function);
+
+  .form-request__comment-field:focus-within & {
+    transform: translate(-12px, -27px);
+  }
+}
+
+.form-request__comment-input:not(:placeholder-shown)
+  + .form-request__comment-label {
+  transform: translate(-12px, -27px);
+}
+
+textarea {
+  resize: none;
+}
+
+.form-request__comment-input {
+  display: block;
+  padding-left: 12px;
+  padding-top: 10px;
+  width: 448px;
+  height: 120px;
+  color: var(--primary-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms var(--timing-function),
+    outline 250ms var(--timing-function);
+
+  .form-request__comment-field:focus-within & {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+  }
+}
+
+.form-request__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-request__checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  transition: background-color 250ms var(--timing-function),
+    border 250ms var(--timing-function);
+  cursor: pointer;
+}
+
+.form-request__checkbox-input:focus + .form-request__checkbox-icon {
+  border-color: var(--accent-color);
+}
+
+.form-request__checkbox-input:checked + .form-request__checkbox-icon {
+  background-image: url("../images/whitecheck.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.form-request__checkbox-text {
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
+.form-request__conditions-link {
+  color: var(--accent-color);
+}
+
+.form-request__btn {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+  min-height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  color: var(--secondary-text-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
